@@ -68,5 +68,17 @@ VALUES
     ('1', '2021-01-09', '12:00:00', 'Comentario 4 en post 2 de Carlos')
 RETURNING *;
 -- 3. crear un registro en 'post' para 'Margarita'
+INSERT INTO 
+post (nombre_usuario, fecha_creacion, contenido, descripcion, titulo) 
+VALUES('Margarita', '2021-07-01', 'Contenido del 1er post de Margarita', 'Descripcion del 1er post de Margarita', 'Margarita - Post 1') 
+RETURNING *;
 
 -- 4. crear 5 registros en 'comentarios' para user Margarita
+INSERT INTO comentarios (id, fecha, hora_creacion, contenido) 
+VALUES 
+('7', '2021-07-02', '12:00:00', '1er comentario a 1er post de Margarita'), 
+('7', '2021-07-03', '12:00:00', '2do comentario a 1er post de Margarita'), 
+('7', '2021-07-04', '12:00:00', '3er comentario a 1er post de Margarita'), 
+('7', '2021-07-05', '12:00:00', '4to comentario a 1er post de Margarita'), 
+('7', '2021-07-08', '12:00:00', '5to comentario a 1er post de Margarita') 
+RETURNING *;
