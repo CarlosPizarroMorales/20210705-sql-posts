@@ -82,3 +82,28 @@ VALUES
 ('7', '2021-07-05', '12:00:00', '4to comentario a 1er post de Margarita'), 
 ('7', '2021-07-08', '12:00:00', '5to comentario a 1er post de Margarita') 
 RETURNING *;
+
+
+-- RESULTADO
+-- id | nombre_usuario | fecha_creacion |              contenido              |              descripcion              |       titulo       
+-- ----+----------------+----------------+-------------------------------------+---------------------------------------+--------------------
+--  2 | Pamela         | 2021-05-25     | Contenido 2do post Pamela           | Descripcion 2do post Pamela           | Pamela - Post 2
+--  1 | Pamela         | 2021-05-23     | Contenido 1er post Pamela           | Descripcion 1er post Pamela           | Pamela - Post 1
+--  4 | Pedro          | 2021-12-02     | Contenido del 1er post de Pedro     | Descripcion 1er post Pedro            | Pedro - Post 1
+--  5 | Pedro          | 2021-12-05     | Contenido del 2do post de Pedro     | Descripcion 2do post Pedro            | Pedro - Post 2
+--  6 | Carlos         | 2021-02-23     | Contenido 2do post de Carlos        | Descripcion 2do post de Carlos        | Carlos - Post 2
+--  7 | Margarita      | 2021-07-01     | Contenido del 1er post de Margarita | Descripcion del 1er post de Margarita | Margarita - Post 1
+
+-- id |   fecha    | hora_creacion |               contenido                
+-- ----+------------+---------------+----------------------------------------
+--  1 | 2021-01-03 | 12:00:00      | Comentario 1 en post 1 de Pamela
+--  2 | 2021-01-06 | 12:00:00      | Comentario 1 en post 2 de Pamela
+--  6 | 2021-05-23 | 12:00:00      | Comentario 1 en post 2 de Carlos
+--  6 | 2021-05-25 | 12:00:00      | Comentario 2 en post 2 de Carlos
+--  6 | 2021-05-30 | 12:00:00      | Comentario 3 en post 2 de Carlos
+--  6 | 2021-06-12 | 12:00:00      | Comentario 4 en post 2 de Carlos
+--  7 | 2021-07-02 | 12:00:00      | 1er comentario a 1er post de Margarita
+--  7 | 2021-07-03 | 12:00:00      | 2do comentario a 1er post de Margarita
+--  7 | 2021-07-04 | 12:00:00      | 3er comentario a 1er post de Margarita
+--  7 | 2021-07-05 | 12:00:00      | 4to comentario a 1er post de Margarita
+--  7 | 2021-07-08 | 12:00:00      | 5to comentario a 1er post de Margarita
